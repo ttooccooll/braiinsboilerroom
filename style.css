@@ -1,33 +1,65 @@
 @font-face {
-    font-family: 'My Font';
-    src: url('Deco.otf');
-  }
-  
-  body {
-    font-family: monospace, sans-serif;
-    background-color: #71380f;
-  }
+  font-family: "My Font";
+  src: url("Deco.otf");
+}
 
-  h1 {
-    font-family: 'My Font';
-    font-size: 100px;
-    background: #8e430e;
-    box-shadow: inset -10px -10px 25px 10px #250f00,
-    inset 10px 10px 25px 10px #250f00,
-    2px 2px 8px #271509,
-    -1px -1px 8px #271509;
-    padding: 35px;
-    width: fit-content;
-    border-radius: 20px;
-  }
+body {
+  font-family: monospace, sans-serif;
+  background: url("boiler.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #71380f;
+}
 
-  #profile-info, #workers-info {
-    background: #8e430e;
-    box-shadow: inset -10px -10px 25px 10px #250f00,
-    inset 10px 10px 25px 10px #250f00,
-    2px 2px 8px #271509,
+h1 {
+  font-family: "My Font";
+  font-size: 100px;
+  background: #8e430e;
+  box-shadow: inset -8px -8px 25px #250f00,
+    inset 8px 8px 25px #250f00, 2px 2px 8px #271509,
     -1px -1px 8px #271509;
-    padding: 35px;
-    width: fit-content;
-    border-radius: 20px;
-  }
+  padding: 35px;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+p {
+    margin: 5px;
+}
+
+#stats {
+  display: flex;
+  flex-direction: row;
+}
+
+#miners, #rewards,
+#workers-info {
+  background: #8e430e;
+  box-shadow: inset -8px -8px 25px #250f00,
+    inset 8px 8px 25px #250f00, 2px 2px 8px #271509,
+    -1px -1px 8px #271509;
+  padding: 35px;
+  margin: 10px;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.ok,
+.off {
+  padding: 5px;
+  border-radius: 3px;
+  font-family: monospace;
+  background-color: #250f00;
+  color: green;
+}
+
+.off {
+  color: red;
+}
+
+#lines {
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+}
+

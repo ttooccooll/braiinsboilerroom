@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+require('dotenv').config();
 
 const app = express();
 
@@ -7,7 +8,7 @@ app.use(express.json());
 
 const apiEndpoint = 'https://pool.braiins.com/accounts/profile/json/btc/';
 const workersEndpoint = 'https://pool.braiins.com/accounts/workers/json/btc/';
-const apiKey = 'bX4OY4T23OVflwyS';
+const apiKey = process.env.API_KEY;
 
 app.get('/profile', async (req, res) => {
   try {
