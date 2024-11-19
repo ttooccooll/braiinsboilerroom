@@ -5,10 +5,29 @@
   
   body {
     font-family: monospace, sans-serif;
-    background-color: #8B4513;
+    background-color: #71380f;
   }
 
   h1 {
     font-family: 'My Font';
     font-size: 100px;
+    background: #8e430e;
+    box-shadow: inset -10px -10px 25px 10px #250f00,
+    inset 10px 10px 25px 10px #250f00,
+    2px 2px 8px #271509,
+    -1px -1px 8px #271509;
+    padding: 35px;
+    width: fit-content;
+    border-radius: 20px;
+  }
+
+  #profile-info, #workers-info {
+    background: #8e430e;
+    box-shadow: inset -10px -10px 25px 10px #250f00,
+    inset 10px 10px 25px 10px #250f00,
+    2px 2px 8px #271509,
+    -1px -1px 8px #271509;
+    padding: 35px;
+    width: fit-content;
+    border-radius: 20px;
   }
