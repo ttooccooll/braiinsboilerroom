@@ -14,11 +14,12 @@ body {
 h1 {
   font-family: "My Font";
   font-size: 100px;
-  background: #8e430e;
+  background-color: rgba(142, 67, 14, 0.9);
   box-shadow: inset -8px -8px 25px #250f00,
     inset 8px 8px 25px #250f00, 2px 2px 8px #271509,
     -1px -1px 8px #271509;
   padding: 35px;
+  margin-left: 15px;
   width: fit-content;
   border-radius: 20px;
 }
@@ -34,7 +35,7 @@ p {
 
 #miners, #rewards,
 #workers-info {
-  background: #8e430e;
+  background-color: rgba(142, 67, 14, 0.9);
   box-shadow: inset -8px -8px 25px #250f00,
     inset 8px 8px 25px #250f00, 2px 2px 8px #271509,
     -1px -1px 8px #271509;
