@@ -21,7 +21,6 @@ app.get('/profile', async (req, res) => {
         'SlushPool-Auth-Token': apiKey,
       },
     });
-    console.log(response.data);
     res.json(response.data);
   } catch (error) {
     console.error(error);
@@ -36,7 +35,6 @@ app.get('/workers', async (req, res) => {
         'SlushPool-Auth-Token': apiKey,
       },
     });
-    console.log(response.data);
     res.json(response.data);
   } catch (error) {
     console.error(error);
