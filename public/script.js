@@ -8,11 +8,14 @@ Promise.all([
       <p>Hard Hashing Miners: ${profileData.btc.ok_workers}</p>
       <p>Lazy Miners: ${profileData.btc.low_workers}</p>
       <p>Dead Miners: ${profileData.btc.off_workers}</p>
-      <p>Today's Earnings: ${(profileData.btc.today_reward*100000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
-      <p>Today's Estimated Total: ${(profileData.btc.estimated_reward*100000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
-      <p>Total Earnings: ${(profileData.btc.all_time_reward*100000000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p>Miners Working: ${((profileData.btc.ok_workers/(profileData.btc.off_workers+profileData.btc.low_workers+profileData.btc.ok_workers))*100).toFixed(2)} %</p>
     </div>
     <div id="rewards">
+      <p>Today's Earnings: ${(profileData.btc.today_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p>Today's Estimated Total: ${(profileData.btc.estimated_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p>Total Earnings: ${(profileData.btc.all_time_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+    </div>
+    <div id="hashing">
       <p>Hash rate 5m: ${(profileData.btc.hash_rate_5m/1000).toFixed(4)} Th/s</p>
       <p>Hash rate 60m: ${(profileData.btc.hash_rate_60m/1000).toFixed(4)} Th/s</p>
       <p>Hash rate 24h: ${(profileData.btc.hash_rate_24h/1000).toFixed(4)} Th/s</p>

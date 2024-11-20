@@ -8,6 +8,7 @@ body {
   background: url("boiler.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: #71380f;
 }
 
@@ -33,7 +34,7 @@ p {
   flex-direction: row;
 }
 
-#miners, #rewards,
+#miners, #rewards, #hashing,
 #workers-info {
   background-color: rgba(142, 67, 14, 0.9);
   box-shadow: inset -8px -8px 25px #250f00,
@@ -64,3 +65,41 @@ p {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 968px) {
+  #stats {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #stats {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 50px;
+    margin: 10px 5px 10px 5px;
+    padding: 15px;
+  }
+  p {
+    margin: 1px;
+    font-size: 12px;
+  }
+
+  #miners, #rewards, #hashing,
+  #workers-info {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .ok,
+  .off {
+    padding: 3px;
+    font-size: 8px;
+  }
+
+  #lines {
+      display: flex;
+      flex-direction: rows;
+      justify-content: space-between;
+  }
+}
