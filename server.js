@@ -1,6 +1,10 @@
-const express = require('express');
-const axios = require('axios');
-require('dotenv').config();
+import express from 'express';
+import axios from 'axios';
+import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+dotenv.config();
 
 const app = express();
 
@@ -38,7 +42,12 @@ app.get('/workers', async (req, res) => {
   }
 });
 
-app.use(express.static(__dirname));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 const port = 3000;
 app.listen(port, () => {
