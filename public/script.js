@@ -5,21 +5,21 @@ Promise.all([
   const profileInfo = document.getElementById('profile-info');
   profileInfo.innerHTML = `
     <div id="miners">
-      <p>Hard Hashing Miners: ${profileData.btc.ok_workers}</p>
-      <p>Lazy Miners: ${profileData.btc.low_workers}</p>
-      <p>Dead Miners: ${profileData.btc.off_workers}</p>
-      <p>Miners Working: ${((profileData.btc.ok_workers/(profileData.btc.off_workers+profileData.btc.low_workers+profileData.btc.ok_workers))*100).toFixed(2)} %</p>
+      <p><b>Hard Hashing Miners:</b> ${profileData.btc.ok_workers}</p>
+      <p><b>Lazy Miners:</b> ${profileData.btc.low_workers}</p>
+      <p><b>Dead Miners:</b> ${profileData.btc.off_workers}</p>
+      <p><b>Miners Working:</b> ${((profileData.btc.ok_workers/(profileData.btc.off_workers+profileData.btc.low_workers+profileData.btc.ok_workers))*100).toFixed(2)} %</p>
     </div>
     <div id="rewards">
-      <p>Today's Earnings: ${(profileData.btc.today_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
-      <p>Today's Estimated Total: ${(profileData.btc.estimated_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
-      <p>Total Earnings: ${(profileData.btc.all_time_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p><b>Today's Earnings:</b> ${(profileData.btc.today_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p><b>Today's Estimated Total:</b> ${(profileData.btc.estimated_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p><b>Total Earnings:</b> ${(profileData.btc.all_time_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
     </div>
     <div id="hashing">
-      <p>Hash rate 5m: ${(profileData.btc.hash_rate_5m/1000).toFixed(4)} Th/s</p>
-      <p>Hash rate 60m: ${(profileData.btc.hash_rate_60m/1000).toFixed(4)} Th/s</p>
-      <p>Hash rate 24h: ${(profileData.btc.hash_rate_24h/1000).toFixed(4)} Th/s</p>
-      <p>Yesterday's Hash Rate: ${(profileData.btc.hash_rate_yesterday/1000).toFixed(4)} Th/s</p>
+      <p><b>Hash rate 5m:</b> ${(profileData.btc.hash_rate_5m/1000).toFixed(4)} Th/s</p>
+      <p><b>Hash rate 60m:</b> ${(profileData.btc.hash_rate_60m/1000).toFixed(4)} Th/s</p>
+      <p><b>Hash rate 24h:</b> ${(profileData.btc.hash_rate_24h/1000).toFixed(4)} Th/s</p>
+      <p><b>Yesterday's Hash Rate:</b> ${(profileData.btc.hash_rate_yesterday/1000).toFixed(4)} Th/s</p>
     </div>
   `;
 
@@ -32,7 +32,7 @@ Promise.all([
     const stateClass = miners[miner].state === 'OK' ? 'ok' : 'off';
     html += `
       <div id="lines">
-        <p>${capitalizedMinerName}: <span class="${stateClass}">${miners[miner].state}</span> ${((miners[miner].hash_rate_60m / 1000).toFixed(3))} Th/s</p>
+        <p><b>${capitalizedMinerName}:</b> <span class="${stateClass}">${miners[miner].state}</span> ${((miners[miner].hash_rate_60m / 1000).toFixed(3))} Th/s</p>
         <p>${(((miners[miner].hash_rate_60m / 1000)/(profileData.btc.hash_rate_60m/1000))*100).toFixed(2)} %</p>
       </div>
     `;
