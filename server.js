@@ -49,7 +49,9 @@ app.get('/favicon.ico', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'favicon.ico'));
 });
 
-const port = 3000;
-app.listen(port, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`);
 });
+
+export default app;
