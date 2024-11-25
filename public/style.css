@@ -19,7 +19,7 @@ h1 {
   box-shadow: inset -8px -8px 25px #250f00,
     inset 8px 8px 25px #250f00, 2px 2px 8px #271509,
     -1px -1px 8px #271509;
-  padding: 35px;
+  padding: 25px;
   margin-left: 15px;
   width: fit-content;
   border-radius: 20px;
@@ -40,10 +40,16 @@ p {
   box-shadow: inset -8px -8px 25px #250f00,
     inset 8px 8px 25px #250f00, 2px 2px 8px #271509,
     -1px -1px 8px #271509;
-  padding: 35px;
+  padding: 25px;
   margin: 10px;
   width: fit-content;
   border-radius: 20px;
+}
+
+#workers-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .ok,
@@ -61,8 +67,14 @@ p {
 
 #lines {
     display: flex;
-    flex-direction: rows;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.little {
+  font-size: 10px;
+  line-height: 10px;
+  margin: 2px;
 }
 
 @media screen and (max-width: 968px) {
