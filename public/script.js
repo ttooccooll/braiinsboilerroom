@@ -32,9 +32,9 @@ Promise.all([
     const stateClass = miners[miner].state === 'OK' ? 'ok' : 'off';
     html += `
       <div id="lines">
-        <p><b>${capitalizedMinerName}:</b> <span class="${stateClass}">${miners[miner].state}</span> ${((miners[miner].hash_rate_60m / 1000).toFixed(3))} Th/s</p>
-        <p class="little"><b>Percent of total hash:</b> ${(((miners[miner].hash_rate_60m / 1000)/(profileData.btc.hash_rate_60m/1000))*100).toFixed(2)} %</p>
-        <p class="little"><b>Extimated Earnings Today:</b> ${(((profileData.btc.estimated_reward*100000000).toFixed(0).toString())*(((miners[miner].hash_rate_60m / 1000)/(profileData.btc.hash_rate_60m/1000)))).toFixed(0)} sats</p>
+        <p><b>${capitalizedMinerName}:</b> <span class="${stateClass}">${miners[miner].state}</span> ${((miners[miner].hash_rate_5m / 1000).toFixed(3))} Th/s</p>
+        <p class="little"><b>Percent of Daily Hash:</b> ${(((miners[miner].hash_rate_60m / 1000)/(profileData.btc.hash_rate_60m/1000))*100).toFixed(2)} %</p>
+        <p class="little"><b>Estimated Earnings Today:</b> ${(((profileData.btc.estimated_reward*100000000).toFixed(0).toString())*(((miners[miner].hash_rate_60m / 1000)/(profileData.btc.hash_rate_60m/1000)))).toFixed(0)} sats</p>
       </div>
     `;
   }
