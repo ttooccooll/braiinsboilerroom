@@ -114,4 +114,7 @@ p {
       flex-direction: rows;
       justify-content: space-between;
   }
+  #workers-info {
+    grid-template-columns: 1fr;
+  }
 }
