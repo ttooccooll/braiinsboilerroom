@@ -29,7 +29,8 @@ Promise.all([
   for (const miner in miners) {
     const minerName = miner.includes('.') ? miner.split('.')[1] : miner;
     const capitalizedMinerName = minerName.charAt(0).toUpperCase() + minerName.slice(1);
-    const stateClass = miners[miner].state === 'OK' ? 'ok' : 'off';
+    const stateClass = miners[miner].state === 'OK' ? 'ok' : 
+                       miners[miner].state === 'LOW' ? 'low' : 'off';
     html += `
       <div id="lines">
         <p><b>${capitalizedMinerName}:</b> <span class="${stateClass}">${miners[miner].state}</span> ${((miners[miner].hash_rate_5m / 1000).toFixed(3))} Th/s</p>
