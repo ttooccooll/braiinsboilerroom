@@ -55,7 +55,7 @@ p {
 .ok,
 .off,
 .low {
-  padding: 5px;
+  padding: 3px;
   border-radius: 3px;
   font-family: monospace;
   background-color: #250f00;
@@ -98,7 +98,7 @@ p {
     padding: 15px;
   }
   p {
-    margin: 1px;
+    margin: 2px;
     font-size: 12px;
   }
 
@@ -110,7 +110,6 @@ p {
 
   .ok,
   .off {
-    padding: 3px;
     font-size: 8px;
   }
 
@@ -121,5 +120,6 @@ p {
   }
   #workers-info {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
