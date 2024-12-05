@@ -16,10 +16,10 @@ Promise.all([
       <p><b>Total Earnings:</b> ${(profileData.btc.all_time_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
     </div>
     <div id="hashing">
-      <p><b>Hash rate 5m:</b> ${(profileData.btc.hash_rate_5m/1000).toFixed(4)} Th/s</p>
-      <p><b>Hash rate 60m:</b> ${(profileData.btc.hash_rate_60m/1000).toFixed(4)} Th/s</p>
-      <p><b>Hash rate 24h:</b> ${(profileData.btc.hash_rate_24h/1000).toFixed(4)} Th/s</p>
-      <p><b>Yesterday's Hash Rate:</b> ${(profileData.btc.hash_rate_yesterday/1000).toFixed(4)} Th/s</p>
+      <p><b>Hash rate 5m:</b> ${(profileData.btc.hash_rate_5m/1000).toFixed(3)} Th/s</p>
+      <p><b>Hash rate 60m:</b> ${(profileData.btc.hash_rate_60m/1000).toFixed(3)} Th/s</p>
+      <p><b>Hash rate 24h:</b> ${(profileData.btc.hash_rate_24h/1000).toFixed(3)} Th/s</p>
+      <p><b>Hash Rate Yesterday:</b> ${(profileData.btc.hash_rate_yesterday/1000).toFixed(3)} Th/s</p>
     </div>
   `;
 
