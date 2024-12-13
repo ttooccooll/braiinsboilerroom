@@ -16,10 +16,10 @@ Promise.all([
       <p><b>Total Earnings:</b> ${(profileData.btc.all_time_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
     </div>
     <div id="hashing">
-      <p><b>Hash rate 5m:</b> ${(profileData.btc.hash_rate_5m/1000).toFixed(3)} Th/s</p>
-      <p><b>Hash rate 60m:</b> ${(profileData.btc.hash_rate_60m/1000).toFixed(3)} Th/s</p>
-      <p><b>Hash rate 24h:</b> ${(profileData.btc.hash_rate_24h/1000).toFixed(3)} Th/s</p>
-      <p><b>Hash Rate Yesterday:</b> ${(profileData.btc.hash_rate_yesterday/1000).toFixed(3)} Th/s</p>
+      <p><b>Hash rate 5m:</b> ${(profileData.btc.hash_rate_5m/1000).toFixed(2)} Th/s</p>
+      <p><b>Hash rate 60m:</b> ${(profileData.btc.hash_rate_60m/1000).toFixed(2)} Th/s</p>
+      <p><b>Hash rate 24h:</b> ${(profileData.btc.hash_rate_24h/1000).toFixed(2)} Th/s</p>
+      <p><b>Average Yesterday:</b> ${(profileData.btc.hash_rate_yesterday/1000).toFixed(2)} Th/s</p>
     </div>
   `;
 
@@ -33,7 +33,7 @@ Promise.all([
                        miners[miner].state === 'LOW' ? 'low' : 'off';
     html += `
       <div id="lines">
-        <p><b>${capitalizedMinerName}:</b> <span class="${stateClass}">${miners[miner].state}</span> ${((miners[miner].hash_rate_5m / 1000).toFixed(3))} Th/s</p>
+        <p><b>${capitalizedMinerName}:</b> <span class="${stateClass}">${miners[miner].state}</span> ${((miners[miner].hash_rate_5m / 1000).toFixed(2))} Th/s</p>
         <p class="little"><b>Percent of Daily Hash:</b> ${(((miners[miner].hash_rate_60m / 1000)/(profileData.btc.hash_rate_60m/1000))*100).toFixed(2)} %</p>
         <p class="little"><b>Estimated Earnings Today:</b> ${(((profileData.btc.estimated_reward*100000000).toFixed(0).toString())*(((miners[miner].hash_rate_60m / 1000)/(profileData.btc.hash_rate_60m/1000)))).toFixed(0)} sats</p>
       </div>
