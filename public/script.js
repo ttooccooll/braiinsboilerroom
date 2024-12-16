@@ -11,8 +11,8 @@ Promise.all([
       <p><b>Miners Working:</b> ${((profileData.btc.ok_workers/(profileData.btc.off_workers+profileData.btc.low_workers+profileData.btc.ok_workers))*100).toFixed(2)} %</p>
     </div>
     <div id="rewards">
-      <p><b>Today's Earnings:</b> ${(profileData.btc.today_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
-      <p><b>Today's Estimated Total:</b> ${(profileData.btc.estimated_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p><b>Earnings Today:</b> ${(profileData.btc.today_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
+      <p><b>Estimated Total Today:</b> ${(profileData.btc.estimated_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
       <p><b>Total Earnings:</b> ${(profileData.btc.all_time_reward*100000000).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} sats</p>
     </div>
     <div id="hashing">
